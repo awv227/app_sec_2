@@ -1,0 +1,13 @@
+    <header>
+        <nav>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="{{ url_for('register') }}" class="nav-link {% if register %}active{% endif %}">Register</a></li>
+                <li class="nav-item"><a href="{{ url_for('login') }}" class="nav-link {% if login %}active{% endif %}">Login</a></li>
+
+                {% if session['id'] %}
+                <li class="nav-item"><a href="{{ url_for('spell_check') }}" class="nav-link {% if spell_check %}active{% endif %}">Spell_Check</a></li> 
+                {% endif %}
+            </ul>
+        </nav>
+        <hr style="clear:both">
+    </header>
